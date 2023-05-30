@@ -20,8 +20,8 @@
         </header>
 
         <main>
-            <form action="">
-                <textarea name="mensagem" id="" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+            <div class="inputs">
+                <textarea name="" id="texto" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
 
                 <span> <strong><img src="./svg/warning.svg" alt=""></strong> Apenas letras minúsculas e sem
                     acento.</span>
@@ -29,17 +29,22 @@
                     <button class="btn btn-crip">Criptografar</button>
                     <button class="btn btn-descrip">Descriptografar</button>
                 </div>
-            </form>
+            </div>
 
             <section class="mensage_box">
-                <div class="no-mensage">
+                <div id="no-mensage">
                     <img src="./svg/personagem.svg" alt="">
                     <h2>Nenhuma mensagem encontrada</h2>
                     <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <div class="texto-exibido">
+                    <p id="meuParagrafo"></p>
+                    <button class="btn btn-copiar" onclick="copiarTexto()">Copiar</button>
                 </div>
             </section>
         </main>
     </div>
 </body>
+<script src="./js/decodificar.js"></script>
 
 </html>

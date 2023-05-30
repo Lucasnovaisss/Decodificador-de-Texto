@@ -8,7 +8,7 @@
 
 
     function ocultarDiv() {
-        divConvertida.style.display = "block";
+        divConvertida.style.display = "flex";
         div.style.display = "none";
         return 
       }

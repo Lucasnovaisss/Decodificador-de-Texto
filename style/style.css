@@ -4,7 +4,6 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #F3F5FC;
     padding: 40px 40px 40px 84px;
-    overflow-x: hidden;
     overflow-y: hidden;
 }
 
@@ -56,7 +55,7 @@ textarea:focus, input:focus, select:focus {
 /* estilização dos botoes */
 
 .btn {
-    width: 328px;
+    width: 20.5rem;
     height: 68px;
     border-radius: 24px;
     cursor: pointer;
@@ -69,6 +68,12 @@ textarea:focus, input:focus, select:focus {
 
 color: #FFFFFF;
 
+}
+
+.btn-content {
+    display: flex;
+    margin-right: 35px;
+    width: 100%;
 }
 
 .btn-crip:hover {
@@ -120,21 +125,29 @@ main span {
 /* box de texto */
 
 .mensage_box {
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding: 32px;
+    
     width: 400px;
     height: 45rem;
+   
     
     background-color: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px; 
     position: relative;
     top: -60px;
-    float: right;
 }
+
+#no-mensage {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 140px;
+}
+
 
 #no-mensage h2 {
     display: block;
@@ -159,19 +172,87 @@ main span {
 
 .texto-exibido {
  display: none;
-
+ width: 100%;
+ justify-content: space-between;
+ flex-direction: column;
+text-align: start;
 }
 
-.texto-exibido p {
+#meuParagrafo {
+    align-self: center;
+    flex-grow: 3;
     font-weight: 400;
-    height: 38rem;
     font-size: 24px;
     line-height: 150%;
     color: #495057;
+    max-width: 400px ;
+}
+
+@media screen and (max-width: 964px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inputs {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-left: 5px;
+    }
+
+    .mensage_box {
+        box-sizing: content-box;
+        position: unset;
+        width: 80%;
+        height: 133px;
+        padding: 20px 40px;
+        margin-top: 64px;
+    }
+    #no-mensage {
+        margin: 0 auto;
+    }
+    #imgagem {
+        display: none;
+    }
+    #texto {
+        height: 300px;
+    }
+
 
 }
 
-@media screen {
+@media screen and (max-width: 450px) {
+
+    body {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inputs{
+        margin: 0 auto;
+        padding: 0%;
+        text-align: center;
+        
+    }
+
+    #texto {
+        width: 100%;
+    }
+
+    .btn-content {
+        flex-direction: column;
+        margin: 0%;
+    }
     
 }
 
